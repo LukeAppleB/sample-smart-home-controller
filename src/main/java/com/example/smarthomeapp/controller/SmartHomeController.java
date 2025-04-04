@@ -9,6 +9,10 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @RequestMapping("/api")
 @EnableScheduling
 public class SmartHomeController {
+    //in a real situation this information would be stored in a DB tied to the user
+    //these apis would update the objects from their current state to the new one,
+    //    notify the device to the update
+    //    and save the new state in the DB
     private final Fan fan = new Fan("Living Room Fan");
     private final Light light = new Light("Living Room Light");
     private final AirConditioner ac = new AirConditioner("Living Room AC");
