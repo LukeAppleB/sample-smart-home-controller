@@ -1,4 +1,4 @@
-package com.example.medavieapp.model;
+package com.example.smarthomeapp.model;
 
 public class AirConditioner {
     private boolean isOn;

@@ -12,9 +12,9 @@
     </parent>
 
     <groupId>com.example</groupId>
-    <artifactId>medavie-app</artifactId>
+    <artifactId>smart-home-app</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>medavie-app</name>
+    <name>smart-home-app</name>
     <description>Spring Boot Application</description>
 
     <properties>
@@ -31,6 +31,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-quartz</artifactId>
         </dependency>
     </dependencies>
 

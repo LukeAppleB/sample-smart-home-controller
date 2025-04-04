@@ -1,10 +1,13 @@
-package com.example.medavieapp.controller;
+package com.example.smarthomeapp.controller;
 
-import com.example.medavieapp.model.*;
+import com.example.smarthomeapp.model.*;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 @RestController
 @RequestMapping("/api")
+@EnableScheduling
 public class SmartHomeController {
     private final Fan fan = new Fan("Living Room Fan");
     private final Light light = new Light("Living Room Light");
@@ -71,5 +74,12 @@ public class SmartHomeController {
         return String.format("AC is %s at %d°C", 
             ac.isOn() ? "ON" : "OFF", 
             ac.getTemperature());
+    }
+
+    @Scheduled(cron = "0 0 1 1 1 *")
+    public void performAnnualUpdate() {
+        fan.setSpeed(FanSpeed.OFF);
+        light.setOn(false);
+        ac.turnOff();
     }
 } 

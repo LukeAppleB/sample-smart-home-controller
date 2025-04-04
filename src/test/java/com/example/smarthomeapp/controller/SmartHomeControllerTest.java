@@ -1,4 +1,4 @@
-package com.example.medavieapp.controller;
+package com.example.smarthomeapp.controller;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
